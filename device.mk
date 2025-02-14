@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-orion
 
 # Overlay-RRO
 PRODUCT_PACKAGES += \
@@ -94,3 +94,6 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sweet2/sweet2-vendor.mk)
+
+# Signed-Keys
+-include vendor/orion-priv/keys/keys.mk
